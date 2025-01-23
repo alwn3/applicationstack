@@ -1,0 +1,12 @@
+replicaCount: 1
+image:
+  repository: alwn3/nodeapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
+env:
+  NODE_ENV: "production"

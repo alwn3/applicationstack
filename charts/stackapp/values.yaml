@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: alwn3/pythonapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 5000
+
+env:
+  FLASK_ENV: "production"
